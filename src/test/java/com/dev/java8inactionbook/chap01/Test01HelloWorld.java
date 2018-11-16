@@ -93,15 +93,5 @@ public class Test01HelloWorld {
         listApple.forEach(System.out::println);
     }
 
-    // 实际上，java加上filter 和 几个相关的东西作为通用库方法
-    @Test
-    public void test05() {
-        List<Apple> inventory = Arrays.asList(new Apple(80,"green"),
-                new Apple(155, "green"),
-                new Apple(120, "red"));
-
-
-
-    }
 
 }
