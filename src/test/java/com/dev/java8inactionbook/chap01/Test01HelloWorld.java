@@ -92,6 +92,4 @@ public class Test01HelloWorld {
         List<Apple> listApple = AppleFilterUtils.filterApples(inventory, apple -> apple.getWeight() > 150 || "green".equals(apple.getColor()));
         listApple.forEach(System.out::println);
     }
-
-
 }

@@ -5,6 +5,7 @@ import com.dev.java8inactionbook.pojo.Transaction;
 import org.junit.Test;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Test02Stream {
 
@@ -50,8 +51,9 @@ public class Test02Stream {
                 new Transaction(220, new Currency("RMB")),
                 new Transaction(100, new Currency("RMB")));
         // java8
-//        transactions.stream()
-//                .filter(transaction -> transaction.getPrice() > 100)
-//                .collect(Transaction::getCurrency)
+        List<Transaction> list = transactions.stream()
+                .filter(transaction -> transaction.getPrice() > 100)
+                .collect(Collectors.toList());
+        list.forEach(System.out::println);
     }
 }
